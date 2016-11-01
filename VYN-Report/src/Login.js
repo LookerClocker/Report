@@ -33,6 +33,7 @@ export default class Password extends Component {
                     list_of_reports: items
                 });
             });
+
             this.setState({label: 'logout'});
         } else {
             this.setState({label: 'login'});
@@ -52,7 +53,7 @@ export default class Password extends Component {
             this.setState({label: 'login'})
         }
         else {
-            this.setState({open: true});
+            this.setState({open: true,list_of_reports: []});
         }
     };
 
@@ -78,8 +79,9 @@ export default class Password extends Component {
     };
 
     handleSend = () => {
-        
+
         var _this = this;
+
         Parse.User.logIn(this.state.login, this.state.password, {
             success: function () {
                 _this.setState({label: 'logout'});

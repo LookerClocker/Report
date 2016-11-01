@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import Password from './Password';
+import Login from './Login';
 
 // import injectTapEventPlugin from 'react-tap-event-plugin';
 // injectTapEventPlugin();
@@ -18,7 +18,7 @@ class App extends Component {
     render() {
         return (
             <AppBar
-                iconElementRight={<Password label="Save"/>}
+                iconElementRight={<Login/>}
             />
         );
     }
