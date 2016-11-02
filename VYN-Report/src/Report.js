@@ -31,6 +31,13 @@ export default class Report extends Component {
         };
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            reports: nextProps.report,
+            rows: nextProps.report
+        });
+    }
+
     // REACT DATA GRID BUILD-IN METHODS
     getRows = ()=> {
         return Selectors.getRows(this.state);
@@ -65,20 +72,21 @@ export default class Report extends Component {
     };
 
     render() {
-        console.log('state on Report Component', this.state.reports);
-        console.log('props on Report Component', this.props.report);
-        console.log('rows on Report Component', this.state.rows);
+        var grid = '';
+        if (this.state.reports.length) {
+            grid = <ReactDataGrid
+                onGridSort={this.handleGridSort}
+                columns={columns}
+                rowGetter={this.rowGetter}
+                rowsCount={this.getSize()}
+                minHeight={500}
+                toolbar={<Toolbar enableFilter={true}/>}
+                onAddFilter={this.handleFilterChange}
+                onClearFilters={this.onClearFilters}/>;
+        }
         return (
-            <div>
-                <ReactDataGrid
-                    onGridSort={this.handleGridSort}
-                    columns={columns}
-                    rowGetter={this.rowGetter}
-                    rowsCount={this.getSize()}
-                    minHeight={500}
-                    toolbar={<Toolbar enableFilter={true}/>}
-                    onAddFilter={this.handleFilterChange}
-                    onClearFilters={this.onClearFilters}/>
+            <div className="table-position">
+                {grid}
             </div>
         )
     }

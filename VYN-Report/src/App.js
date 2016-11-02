@@ -4,14 +4,17 @@ import AppBar from 'material-ui/AppBar';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import './App.css'
+
 import Login from './Login';
 import Report from './Report';
 
-class App extends Component {
+export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            reports: 'some text'
+            reports: []
         }
     };
 
@@ -19,8 +22,9 @@ class App extends Component {
         return {muiTheme: getMuiTheme(baseTheme)};
     };
 
+    // callback function witch fetch Reports from Login component
     fetchReport = (report)=> {
-        this.setState({reports: report})
+        this.setState({reports: report});
     };
 
     render() {
@@ -31,7 +35,6 @@ class App extends Component {
                 />
                 <Report report={this.state.reports}/>
             </div>
-
         );
     }
 }
@@ -39,5 +42,3 @@ class App extends Component {
 App.childContextTypes = {
     muiTheme: React.PropTypes.object
 };
-
-export default App;

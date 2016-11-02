@@ -32,13 +32,8 @@ export default class Login extends Component {
                 _this.setState({
                     list_of_reports: items
                 });
-                var data = _this.state.list_of_reports.map(function (item) {
-                    return {
-                        reportID: item.id,
-                        createdAt: item.get('createdAt').toString()
-                    }
-                });
-                _this.props.fetch(data);
+                // pass data to App after reloading page
+                _this.fullFill(items);
             });
 
             this.setState({label: 'logout'});
@@ -47,13 +42,33 @@ export default class Login extends Component {
         }
     };
 
+    // get all reports from Parse
+    getReport = (callback)=> {
+        var query = new Parse.Query('Report');
+        query.limit(10000);
+        query.include('campaign');
+        query.find({
+            success: function (report) {
+                callback(report);
+            },
+            error: function (error) {
+                console.error('getReports() error', error);
+                callback(null, error);
+            }
+        });
+        return true;
+    };
+
     // handling login button
     handleOpen = () => {
+        var _this = this;
         // check if user exist
         if (Parse.User.current()) {
             // making logout and depend of it change button title
             Parse.User.logOut().then(function () {
                 console.log('success');
+                _this.setState({list_of_reports: []});
+                _this.props.fetch(_this.state.list_of_reports)
             }, function (error) {
                 console.log('error');
             });
@@ -65,32 +80,22 @@ export default class Login extends Component {
         }
     };
 
-    // get all reports from Parse
-    getReport = (callback)=> {
-        var _this = this;
-        // fetching reports
-        var query = new Parse.Query('Report');
-        query.limit(10000);
-        query.include('campaign');
-        query.find({
-            success: function (report) {
-                _this.setState({
-                    list_of_reports: report
-                });
-                callback(report);
-            },
-            error: function (error) {
-                console.error('getReports() error', error);
-                callback(null, error);
+    // forming data to custom object and send them to App
+    fullFill = (items)=> {
+        var data = items.map(function (item) {
+            return {
+                reportID: item.id,
+                createdAt: item.get('createdAt').toLocaleDateString()
             }
         });
-        return true;
+        // function declared in App component
+        this.props.fetch(data);
     };
 
     // sending user credentials and compare them with those which are in database
     handleSend = () => {
         var _this = this;
-        // making login sent username and password
+        // making login, sent username and password
         Parse.User.logIn(this.state.login, this.state.password, {
             success: function () {
                 _this.setState({label: 'logout'});
@@ -99,13 +104,8 @@ export default class Login extends Component {
                     _this.setState({
                         list_of_reports: items
                     });
-                    var data = items.map(function (item) {
-                        return {
-                            reportID: item.id,
-                            createdAt: item.get('createdAt').toString()
-                        }
-                    });
-                    _this.props.fetch(data);
+                    // pass data to App
+                    _this.fullFill(items);
                 });
             },
             error: function (user, error) {
@@ -120,10 +120,12 @@ export default class Login extends Component {
         });
     };
 
+    // close dialog with password
     handleClose = () => {
         this.setState({open: false});
     };
 
+    // rendering table
     render() {
         const styles = {
             title: {

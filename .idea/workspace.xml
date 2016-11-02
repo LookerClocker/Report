@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccde5591-30f9-457f-b6e3-6f98b2a6597d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VYN-Report/src/Report.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/package.json" afterPath="$PROJECT_DIR$/VYN-Report/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/src/App.css" afterPath="$PROJECT_DIR$/VYN-Report/src/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/src/App.js" afterPath="$PROJECT_DIR$/VYN-Report/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/src/Login.js" afterPath="$PROJECT_DIR$/VYN-Report/src/Login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/src/Report.js" afterPath="$PROJECT_DIR$/VYN-Report/src/Report.js" />
     </list>
     <ignored path="VYN-Report.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,41 +33,48 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VYN-Report/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#535#593#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/VYN-Report/src/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+            <state relative-caret-position="188">
+              <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#3863#4133#0" expanded="false" />
+                <element signature="e#759#1249#0" expanded="false" />
+                <element signature="e#1315#1727#0" expanded="false" />
+                <element signature="e#1782#2387#0" expanded="false" />
+                <element signature="e#2473#2757#0" expanded="false" />
+                <element signature="e#2865#3687#0" expanded="false" />
+                <element signature="e#3748#3793#0" expanded="false" />
+                <element signature="e#3857#4127#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Report.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Report.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VYN-Report/src/Report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-418">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="71">
+              <caret line="77" column="48" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#783#836#0" expanded="false" />
-                <element signature="e#859#904#0" expanded="false" />
-                <element signature="e#934#1005#0" expanded="false" />
-                <element signature="e#1059#1203#0" expanded="false" />
-                <element signature="e#1242#1521#0" expanded="false" />
-                <element signature="e#1551#1596#0" expanded="false" />
+                <element signature="e#943#996#0" expanded="false" />
+                <element signature="e#1019#1064#0" expanded="false" />
+                <element signature="e#1094#1165#0" expanded="false" />
+                <element signature="e#1219#1363#0" expanded="false" />
+                <element signature="e#1402#1681#0" expanded="false" />
+                <element signature="e#1711#1756#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,8 +97,9 @@
       <list>
         <option value="$PROJECT_DIR$/VYN-Report/src/Snackbar.js" />
         <option value="$PROJECT_DIR$/VYN-Report/src/Password.js" />
-        <option value="$PROJECT_DIR$/VYN-Report/src/Report.js" />
         <option value="$PROJECT_DIR$/VYN-Report/src/Login.js" />
+        <option value="$PROJECT_DIR$/VYN-Report/src/App.css" />
+        <option value="$PROJECT_DIR$/VYN-Report/src/Report.js" />
         <option value="$PROJECT_DIR$/VYN-Report/src/App.js" />
       </list>
     </option>
@@ -135,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,7 +197,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -260,6 +269,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ccde5591-30f9-457f-b6e3-6f98b2a6597d" name="Default" comment="" />
@@ -269,15 +281,16 @@
       <updated>1477996988488</updated>
       <workItem from="1477996992965" duration="20325000" />
       <workItem from="1478075134080" duration="23000" />
-      <workItem from="1478075810126" duration="26691000" />
+      <workItem from="1478075810126" duration="27275000" />
+      <workItem from="1478112301350" duration="17701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47039000" />
+    <option name="totallyTimeSpent" value="65324000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24776785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -286,7 +299,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30278233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41898528" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -311,7 +324,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -322,6 +335,51 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#535#593#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#759#1249#0" expanded="false" />
+            <element signature="e#1315#1727#0" expanded="false" />
+            <element signature="e#1782#2387#0" expanded="false" />
+            <element signature="e#2473#2757#0" expanded="false" />
+            <element signature="e#2865#3687#0" expanded="false" />
+            <element signature="e#3748#3793#0" expanded="false" />
+            <element signature="e#3857#4127#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/Report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#943#996#0" expanded="false" />
+            <element signature="e#1019#1064#0" expanded="false" />
+            <element signature="e#1094#1165#0" expanded="false" />
+            <element signature="e#1219#1363#0" expanded="false" />
+            <element signature="e#1402#1681#0" expanded="false" />
+            <element signature="e#1711#1756#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#535#593#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -332,7 +390,13 @@
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#3863#4133#0" expanded="false" />
+            <element signature="e#759#1249#0" expanded="false" />
+            <element signature="e#1315#1727#0" expanded="false" />
+            <element signature="e#1782#2387#0" expanded="false" />
+            <element signature="e#2473#2757#0" expanded="false" />
+            <element signature="e#2865#3687#0" expanded="false" />
+            <element signature="e#3748#3793#0" expanded="false" />
+            <element signature="e#3857#4127#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -346,39 +410,54 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VYN-Report/src/Snackbar.js" />
-    <entry file="file://$PROJECT_DIR$/VYN-Report/src/Login.js">
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        <state relative-caret-position="34">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/Report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="77" column="48" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="48" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#3863#4133#0" expanded="false" />
+            <element signature="e#943#996#0" expanded="false" />
+            <element signature="e#1019#1064#0" expanded="false" />
+            <element signature="e#1094#1165#0" expanded="false" />
+            <element signature="e#1219#1363#0" expanded="false" />
+            <element signature="e#1402#1681#0" expanded="false" />
+            <element signature="e#1711#1756#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VYN-Report/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="273">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#535#593#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VYN-Report/src/Report.js">
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-418">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="188">
+          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#783#836#0" expanded="false" />
-            <element signature="e#859#904#0" expanded="false" />
-            <element signature="e#934#1005#0" expanded="false" />
-            <element signature="e#1059#1203#0" expanded="false" />
-            <element signature="e#1242#1521#0" expanded="false" />
-            <element signature="e#1551#1596#0" expanded="false" />
+            <element signature="e#759#1249#0" expanded="false" />
+            <element signature="e#1315#1727#0" expanded="false" />
+            <element signature="e#1782#2387#0" expanded="false" />
+            <element signature="e#2473#2757#0" expanded="false" />
+            <element signature="e#2865#3687#0" expanded="false" />
+            <element signature="e#3748#3793#0" expanded="false" />
+            <element signature="e#3857#4127#0" expanded="false" />
           </folding>
         </state>
       </provider>
