@@ -26,8 +26,8 @@ export default class Password extends Component {
     componentDidMount() {
         var _this = this;
 
+        // displaying data only if user exists
         if (Parse.User.current()) {
-
             this.getReport(function (items) {
                 _this.setState({
                     list_of_reports: items
@@ -40,10 +40,11 @@ export default class Password extends Component {
         }
     };
 
+    // handling login button
     handleOpen = () => {
-
+        // check if user exist
         if (Parse.User.current()) {
-
+            // making logout and depend of it change button title
             Parse.User.logOut().then(function () {
                 console.log('success');
             }, function (error) {
@@ -56,10 +57,10 @@ export default class Password extends Component {
             this.setState({open: true,list_of_reports: []});
         }
     };
-
+    // get all reports from Parse
     getReport = (callback)=> {
         var _this = this;
-        // NOW IM GOING TO FETCH REPORTS
+        // fetching reports
         var query = new Parse.Query('Campaign');
         query.limit(10000);
         query.include('user');
@@ -78,13 +79,20 @@ export default class Password extends Component {
         return true;
     };
 
+    // sending user credentials and compare them with those which are in database
     handleSend = () => {
 
         var _this = this;
-
+        // making login sent username and password
         Parse.User.logIn(this.state.login, this.state.password, {
             success: function () {
                 _this.setState({label: 'logout'});
+                // call this function to display data immediately after login
+                _this.getReport(function (items) {
+                    _this.setState({
+                        list_of_reports: items
+                    });
+                });
             },
             error: function (user, error) {
                 console.log(user + error);
@@ -137,7 +145,7 @@ export default class Password extends Component {
                 <FlatButton label={this.state.label} style={styles.title} onClick={this.handleOpen}/>
                 <Dialog
                     style={styles.textPosition}
-                    title="Enter your credentials"
+                    title="Enter your password"
                     actions={actions}
                     modal={false}
                     open={this.state.open}
