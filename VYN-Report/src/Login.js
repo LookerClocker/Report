@@ -11,7 +11,7 @@ var parseMasterKey = 'PZ/Fc_YwK:d5[Szp';
 Parse.serverURL = "http://api.valueyournetwork.com/parse";
 Parse.initialize(parseApplicationId, parseJavaScriptKey, parseMasterKey);
 
-export default class Password extends Component {
+export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,6 +32,13 @@ export default class Password extends Component {
                 _this.setState({
                     list_of_reports: items
                 });
+                var data = _this.state.list_of_reports.map(function (item) {
+                    return {
+                        reportID: item.id,
+                        createdAt: item.get('createdAt').toString()
+                    }
+                });
+                _this.props.fetch(data);
             });
 
             this.setState({label: 'logout'});
@@ -54,16 +61,17 @@ export default class Password extends Component {
             this.setState({label: 'login'})
         }
         else {
-            this.setState({open: true,list_of_reports: []});
+            this.setState({open: true, list_of_reports: []});
         }
     };
+
     // get all reports from Parse
     getReport = (callback)=> {
         var _this = this;
         // fetching reports
-        var query = new Parse.Query('Campaign');
+        var query = new Parse.Query('Report');
         query.limit(10000);
-        query.include('user');
+        query.include('campaign');
         query.find({
             success: function (report) {
                 _this.setState({
@@ -81,7 +89,6 @@ export default class Password extends Component {
 
     // sending user credentials and compare them with those which are in database
     handleSend = () => {
-
         var _this = this;
         // making login sent username and password
         Parse.User.logIn(this.state.login, this.state.password, {
@@ -92,6 +99,13 @@ export default class Password extends Component {
                     _this.setState({
                         list_of_reports: items
                     });
+                    var data = items.map(function (item) {
+                        return {
+                            reportID: item.id,
+                            createdAt: item.get('createdAt').toString()
+                        }
+                    });
+                    _this.props.fetch(data);
                 });
             },
             error: function (user, error) {
@@ -111,7 +125,6 @@ export default class Password extends Component {
     };
 
     render() {
-        console.log('campaigns', this.state.list_of_reports);
         const styles = {
             title: {
                 cursor: 'pointer',
@@ -169,3 +182,7 @@ export default class Password extends Component {
         )
     }
 }
+
+Login.propTypes = {
+    fetch: React.PropTypes.func,
+};

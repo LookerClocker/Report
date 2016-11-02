@@ -5,21 +5,33 @@ import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import Login from './Login';
-
-// import injectTapEventPlugin from 'react-tap-event-plugin';
-// injectTapEventPlugin();
+import Report from './Report';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            reports: 'some text'
+        }
+    };
 
     getChildContext = () => {
         return {muiTheme: getMuiTheme(baseTheme)};
     };
 
+    fetchReport = (report)=> {
+        this.setState({reports: report})
+    };
+
     render() {
         return (
-            <AppBar
-                iconElementRight={<Login/>}
-            />
+            <div>
+                <AppBar
+                    iconElementRight={<Login fetch={this.fetchReport}/>}
+                />
+                <Report report={this.state.reports}/>
+            </div>
+
         );
     }
 }

@@ -9,6 +9,7 @@
   "dependencies": {
     "material-ui-password-field": "^1.0.2",
     "react": "^15.3.2",
+    "react-data-grid": "^1.0.55",
     "react-dom": "^15.3.2"
   },
   "scripts": {
