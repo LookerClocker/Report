@@ -19,7 +19,9 @@ export default class Login extends Component {
             password: '',
             login: 'sasha',
             label: 'Login',
-            list_of_reports: []
+            list_of_reports: [],
+            list_of_campaign: []
+
         };
     };
 
@@ -36,6 +38,14 @@ export default class Login extends Component {
                 _this.fullFill(items);
             });
 
+            this.getCampaign(function (items) {
+                _this.setState({
+                    list_of_campaign: items
+                });
+                // pass campaign data to App
+                _this.fullFilCampaign(items);
+            });
+
             this.setState({label: 'logout'});
         } else {
             this.setState({label: 'login'});
@@ -50,6 +60,21 @@ export default class Login extends Component {
         query.find({
             success: function (report) {
                 callback(report);
+            },
+            error: function (error) {
+                console.error('getReports() error', error);
+                callback(null, error);
+            }
+        });
+        return true;
+    };
+
+    getCampaign = (callback)=> {
+        var query = new Parse.Query('Campaign');
+        query.limit(10000);
+        query.find({
+            success: function (camp) {
+                callback(camp);
             },
             error: function (error) {
                 console.error('getReports() error', error);
@@ -78,6 +103,18 @@ export default class Login extends Component {
         else {
             this.setState({open: true, list_of_reports: []});
         }
+    };
+
+    // forming campaign data to custom object and send them to App
+    fullFilCampaign = (items)=> {
+        var data = items.map(function (item) {
+            return {
+                id: item.id,
+                parentCamp: item.get('ParentCampaign') ? item.get('ParentCampaign') : null
+            }
+        });
+        // function declared in App component
+        this.props.fetchCampaign(data)
     };
 
     // forming data to custom object and send them to App
