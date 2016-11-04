@@ -11,5 +11,28 @@
 }
 
 .dropdown-width {
-    min-width:200px;
+    min-width: 30.4%;
+}
+
+.img-preview {
+    width: 88.2%;
+    padding: 5% 0 3% 0;
+    border-radius: 20px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: 'Chose logo:';
+    text-align: left;
+}
+
+.filebutt-width {
+    width: 88.2%;
+}
+
+.image-row {
+    padding-top: 4%;
 }

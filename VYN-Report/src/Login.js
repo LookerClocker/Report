@@ -21,7 +21,6 @@ export default class Login extends Component {
             label: 'Login',
             list_of_reports: [],
             list_of_campaign: []
-
         };
     };
 
@@ -121,10 +120,12 @@ export default class Login extends Component {
     fullFill = (items)=> {
         var data = items.map(function (item) {
             return {
-                reportID: item.id,
-                createdAt: item.get('createdAt').toLocaleDateString()
+                name: item.get('name'),
+                token: item.get('token')
             }
         });
+
+        console.log(items);
         // function declared in App component
         this.props.fetch(data);
     };

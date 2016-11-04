@@ -8,14 +8,14 @@ import AddReport from './AddReport'
 
 var columns = [
     {
-        key: 'reportID',
-        name: 'Report id',
+        key: 'name',
+        name: 'Name',
         sortable: true,
         filterable: true
     },
     {
-        key: 'createdAt',
-        name: 'Created date',
+        key: 'token',
+        name: 'Reference',
         sortable: true,
         filterable: true
     }
