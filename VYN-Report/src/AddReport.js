@@ -179,9 +179,6 @@ export default class AddReport extends Component {
             <div>
                 {reportConfirm}
                 <div className="row">
-                    <div className="col-md-12">Add new Report</div>
-                </div>
-                <div className="row">
                     <div className="col-md-3">
                         <TextField
                             ref='name'
@@ -214,27 +211,26 @@ export default class AddReport extends Component {
                     </div>
                 </div>
                 <div className="row image-row">
-                    <div className="col-sm-3 col-md-3">
-                        <input className="filebutt-width custom-file-input btn btn-primary" type="file"
+                    <div className="col-md-3">
+                        <input className="custom-file-input btn btn-primary" type="file"
                                onChange={this.handleImageChange}/>
                         {imagePreview}
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-offset-8 col-md-3 dropdown-position">
-                        <button
-                            className="btn btn-primary"
-                            onClick={this.handleAddReport}>
-                            Add Report
-                        </button>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-6">
+                    <hr/>
+                    <div className="col-md-3">
                         <button
                             className="btn btn-primary"
                             onClick={this.clickBack}>
                             Back
+                        </button>
+                    </div>
+                    <div className="add-report-mobile col-md-3 col-md-offset-2">
+                        <button
+                            className="btn btn-primary"
+                            onClick={this.handleAddReport}>
+                            Add Report
                         </button>
                     </div>
                 </div>

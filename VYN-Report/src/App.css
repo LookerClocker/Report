@@ -15,7 +15,7 @@
 }
 
 .img-preview {
-    width: 88.2%;
+    width: 300px;
     padding: 5% 0 3% 0;
     border-radius: 20px;
 }
@@ -29,10 +29,12 @@
     text-align: left;
 }
 
-.filebutt-width {
-    width: 88.2%;
-}
-
 .image-row {
     padding-top: 4%;
+}
+
+@media screen and(max-width:992px){
+    .add-report-mobile {
+        margin-top: 8% !important;
+    }
 }

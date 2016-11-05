@@ -22,6 +22,18 @@ var columns = [
         filterable: true
     },
     {
+        key: 'startDate',
+        name: 'Start date',
+        sortable: true,
+        filterable: true
+    },
+    {
+        key: 'endDate',
+        name: 'End date',
+        sortable: true,
+        filterable: true
+    },
+    {
         key: 'token',
         name: 'Reference',
         sortable: true,

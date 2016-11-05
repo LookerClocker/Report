@@ -121,7 +121,9 @@ export default class Login extends Component {
         var data = items.map(function (item) {
             return {
                 name: item.get('name'),
-                token: item.get('token')
+                token: item.get('token'),
+                startDate: item.get('startDate').toLocaleDateString(),
+                endDate: item.get('endDate').toLocaleDateString()
             }
         });
 
