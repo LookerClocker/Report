@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccde5591-30f9-457f-b6e3-6f98b2a6597d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/VYN-Report/src/AddedReportConfirm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/src/AddReport.js" afterPath="$PROJECT_DIR$/VYN-Report/src/AddReport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/src/App.js" afterPath="$PROJECT_DIR$/VYN-Report/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/src/Login.js" afterPath="$PROJECT_DIR$/VYN-Report/src/Login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VYN-Report/src/Report.js" afterPath="$PROJECT_DIR$/VYN-Report/src/Report.js" />
     </list>
     <ignored path="VYN-Report.iws" />
@@ -32,7 +31,7 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VYN-Report/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="238">
               <caret line="41" column="85" selection-start-line="41" selection-start-column="85" selection-end-line="41" selection-end-column="85" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -45,9 +44,10 @@
       <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VYN-Report/src/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="139" column="75" selection-start-line="139" selection-start-column="75" selection-end-line="139" selection-end-column="75" />
+            <state relative-caret-position="-2240">
+              <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
               <folding>
+                <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#949#1156#0" expanded="false" />
                 <element signature="e#1286#1489#0" expanded="false" />
                 <element signature="e#1682#2094#0" expanded="false" />
@@ -61,22 +61,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddReport.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddReport.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VYN-Report/src/AddReport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
+            <state relative-caret-position="1870">
+              <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#173#242#0" expanded="true" />
-                <element signature="e#1407#2056#0" expanded="false" />
-                <element signature="e#2080#2125#0" expanded="false" />
-                <element signature="e#2156#2214#0" expanded="false" />
-                <element signature="e#2261#2388#0" expanded="false" />
-                <element signature="e#2501#2870#0" expanded="false" />
-                <element signature="e#2903#3218#0" expanded="false" />
-                <element signature="e#3260#3331#0" expanded="false" />
-                <element signature="e#3371#3440#0" expanded="false" />
+                <element signature="e#170#239#0" expanded="true" />
+                <element signature="e#1482#2131#0" expanded="false" />
+                <element signature="e#2155#2200#0" expanded="false" />
+                <element signature="e#2231#2289#0" expanded="false" />
+                <element signature="e#2336#2463#0" expanded="false" />
+                <element signature="e#2576#2945#0" expanded="false" />
+                <element signature="e#2978#3293#0" expanded="false" />
+                <element signature="e#3335#3406#0" expanded="false" />
+                <element signature="e#3446#3515#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddedReportConfirm.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/VYN-Report/src/AddedReportConfirm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,8 +97,8 @@
       <file leaf-file-name="Report.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VYN-Report/src/Report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+            <state relative-caret-position="73">
+              <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#1288#1363#0" expanded="false" />
@@ -125,6 +137,7 @@
         <option value="$PROJECT_DIR$/VYN-Report/src/Login.js" />
         <option value="$PROJECT_DIR$/VYN-Report/src/Report.js" />
         <option value="$PROJECT_DIR$/VYN-Report/src/AddReport.js" />
+        <option value="$PROJECT_DIR$/VYN-Report/src/AddedReportConfirm.js" />
       </list>
     </option>
   </component>
@@ -170,7 +183,56 @@
     <panes>
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VYN-Report" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
@@ -259,24 +321,24 @@
       <workItem from="1478075810126" duration="27275000" />
       <workItem from="1478112301350" duration="17887000" />
       <workItem from="1478160583891" duration="51376000" />
-      <workItem from="1478346539109" duration="5402000" />
+      <workItem from="1478346539109" duration="11333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122288000" />
+    <option name="totallyTimeSpent" value="128219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17559524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17559524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38134205" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31587562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -340,6 +402,7 @@
         <state relative-caret-position="714">
           <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
           <folding>
+            <element signature="e#0#39#0" expanded="true" />
             <element signature="e#949#1156#0" expanded="false" />
             <element signature="e#1286#1489#0" expanded="false" />
             <element signature="e#1682#2094#0" expanded="false" />
@@ -358,15 +421,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#173#242#0" expanded="true" />
-            <element signature="e#1407#2056#0" expanded="false" />
-            <element signature="e#2080#2125#0" expanded="false" />
-            <element signature="e#2156#2214#0" expanded="false" />
-            <element signature="e#2261#2388#0" expanded="false" />
-            <element signature="e#2501#2870#0" expanded="false" />
-            <element signature="e#2903#3218#0" expanded="false" />
-            <element signature="e#3260#3331#0" expanded="false" />
-            <element signature="e#3371#3440#0" expanded="false" />
+            <element signature="e#170#239#0" expanded="true" />
+            <element signature="e#1482#2131#0" expanded="false" />
+            <element signature="e#2155#2200#0" expanded="false" />
+            <element signature="e#2231#2289#0" expanded="false" />
+            <element signature="e#2336#2463#0" expanded="false" />
+            <element signature="e#2576#2945#0" expanded="false" />
+            <element signature="e#2978#3293#0" expanded="false" />
+            <element signature="e#3335#3406#0" expanded="false" />
+            <element signature="e#3446#3515#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -405,6 +468,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#0#39#0" expanded="true" />
             <element signature="e#949#1156#0" expanded="false" />
             <element signature="e#1286#1489#0" expanded="false" />
             <element signature="e#1682#2094#0" expanded="false" />
@@ -451,6 +515,7 @@
         <state relative-caret-position="578">
           <caret line="34" column="76" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="76" />
           <folding>
+            <element signature="e#0#39#0" expanded="true" />
             <element signature="e#949#1156#0" expanded="false" />
             <element signature="e#1286#1489#0" expanded="false" />
             <element signature="e#1682#2094#0" expanded="false" />
@@ -497,6 +562,7 @@
         <state relative-caret-position="272">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
+            <element signature="e#0#39#0" expanded="true" />
             <element signature="e#949#1156#0" expanded="false" />
             <element signature="e#1286#1489#0" expanded="false" />
             <element signature="e#1682#2094#0" expanded="false" />
@@ -541,38 +607,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VYN-Report/src/App.js">
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/AddReport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="41" column="85" selection-start-line="41" selection-start-column="85" selection-end-line="41" selection-end-column="85" />
+        <state relative-caret-position="1870">
+          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#561#619#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VYN-Report/src/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="139" column="75" selection-start-line="139" selection-start-column="75" selection-end-line="139" selection-end-column="75" />
-          <folding>
-            <element signature="e#949#1156#0" expanded="false" />
-            <element signature="e#1286#1489#0" expanded="false" />
-            <element signature="e#1682#2094#0" expanded="false" />
-            <element signature="e#2162#2537#0" expanded="false" />
-            <element signature="e#2592#3197#0" expanded="false" />
-            <element signature="e#4469#4682#0" expanded="false" />
-            <element signature="e#4736#4959#0" expanded="false" />
-            <element signature="e#5272#5317#0" expanded="false" />
+            <element signature="e#170#239#0" expanded="true" />
+            <element signature="e#1482#2131#0" expanded="false" />
+            <element signature="e#2155#2200#0" expanded="false" />
+            <element signature="e#2231#2289#0" expanded="false" />
+            <element signature="e#2336#2463#0" expanded="false" />
+            <element signature="e#2576#2945#0" expanded="false" />
+            <element signature="e#2978#3293#0" expanded="false" />
+            <element signature="e#3335#3406#0" expanded="false" />
+            <element signature="e#3446#3515#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/VYN-Report/src/Report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+        <state relative-caret-position="73">
+          <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#1288#1363#0" expanded="false" />
@@ -587,21 +644,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VYN-Report/src/AddReport.js">
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
+        <state relative-caret-position="-2240">
+          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#173#242#0" expanded="true" />
-            <element signature="e#1407#2056#0" expanded="false" />
-            <element signature="e#2080#2125#0" expanded="false" />
-            <element signature="e#2156#2214#0" expanded="false" />
-            <element signature="e#2261#2388#0" expanded="false" />
-            <element signature="e#2501#2870#0" expanded="false" />
-            <element signature="e#2903#3218#0" expanded="false" />
-            <element signature="e#3260#3331#0" expanded="false" />
-            <element signature="e#3371#3440#0" expanded="false" />
+            <element signature="e#949#1156#0" expanded="false" />
+            <element signature="e#1286#1489#0" expanded="false" />
+            <element signature="e#1682#2094#0" expanded="false" />
+            <element signature="e#2162#2537#0" expanded="false" />
+            <element signature="e#2592#3197#0" expanded="false" />
+            <element signature="e#4469#4682#0" expanded="false" />
+            <element signature="e#4736#4959#0" expanded="false" />
+            <element signature="e#5272#5317#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="85" selection-start-line="41" selection-start-column="85" selection-end-line="41" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#561#619#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VYN-Report/src/AddedReportConfirm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

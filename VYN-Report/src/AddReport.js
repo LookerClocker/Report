@@ -1,17 +1,13 @@
 import React, {Component} from 'react';
-
 import TextField from 'material-ui/TextField';
-
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
-
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
-
 import DatePicker from 'material-ui/DatePicker';
+import ReportConfirm from './AddedReportConfirm'
 
 var Parse = require('parse').Parse;
 var parseApplicationId = 'VYN-BO';
@@ -37,7 +33,8 @@ export default class AddReport extends Component {
             startDate: {},
             endDate: {},
             clickedCampaign: [],
-            token: ''
+            token: '',
+            sentReport: false
         };
     }
 
@@ -119,6 +116,7 @@ export default class AddReport extends Component {
     };
 
     handleAddReport = ()=> {
+        var _this = this;
         var token = Math.random().toString(36).substr(2);
 
         var ReportClass = Parse.Object.extend('Report');
@@ -127,25 +125,28 @@ export default class AddReport extends Component {
         report.set('name', this.state.reportName);
         report.set('startDate', this.state.startDate);
         report.set('endDate', this.state.endDate);
-        report.set('campaign',this.state.clickedCampaign.map(function(camp){
-            return {"__type":"Pointer","className":"Campaign","objectId":camp}
+        report.set('campaign', this.state.clickedCampaign.map(function (camp) {
+            return {"__type": "Pointer", "className": "Campaign", "objectId": camp}
         }));
-        var name='logo.jpg';
+        var name = 'logo.jpg';
         var parseFile = new Parse.File(name, this.state.file);
 
-        console.log('parsefile->',parseFile);
+        console.log('parsefile->', parseFile);
 
-        parseFile.save().then(function(){
-            console.log('file has send');
-        },function(error){
+        parseFile.save().then(function () {
+        }, function (error) {
             console.log('the file could not been saved', error);
         });
 
         report.set('logo', parseFile);
         report.set('token', token);
-
         report.save(null, {
             success: function (report) {
+                if (report) {
+                    _this.setState({
+                        sentReport: true
+                    });
+                }
                 console.log(report);
             }
         }, {
@@ -158,15 +159,19 @@ export default class AddReport extends Component {
     render() {
 
         var {imagePreviewUrl} = this.state;
-        var imagePreview = null;
-        if (imagePreviewUrl) {
-            imagePreview = (<img className="img-preview" src={imagePreviewUrl} alt="text"/>);
+
+        if(imagePreviewUrl) {
+            var imagePreview = <img className="img-preview" src={imagePreviewUrl} alt="text"/>
+        }
+        if(this.state.sentReport) {
+            var reportConfirm = <ReportConfirm name={this.state.reportName}/>
         }
 
         var menuIcons = this.dropdownMenuItems();
 
         return (
             <div>
+                {reportConfirm}
                 <div className="row">
                     <div className="col-md-12">Add new Report</div>
                 </div>

@@ -102,8 +102,7 @@ export default class Report extends Component {
 
         // even if user exist but report are empty show AddReport button
         if (Parse.User.current()) {
-            addReportButt =
-                <button className="btn btn-primary add-report" onClick={this.handleAddReport}> Add new Report </button>;
+            addReportButt = <button className="btn btn-primary add-report" onClick={this.handleAddReport}> Add new Report </button>;
             // add report view
             AddReportComp = <AddReport campReports={this.state.reports} handleBack={this.backButton} campainsList={this.state.campaigns}/>;
         }
