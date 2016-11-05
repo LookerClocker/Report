@@ -7,7 +7,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import DatePicker from 'material-ui/DatePicker';
-import ReportConfirm from './AddedReportConfirm'
+import ReportConfirm from './SuccessDialog'
 
 var Parse = require('parse').Parse;
 var parseApplicationId = 'VYN-BO';
@@ -34,7 +34,8 @@ export default class AddReport extends Component {
             endDate: {},
             clickedCampaign: [],
             token: '',
-            sentReport: false
+            sentReport: false,
+            fileName: ''
         };
     }
 
@@ -87,6 +88,7 @@ export default class AddReport extends Component {
         return row;
     };
 
+    // read and load image
     handleImageChange = (e)=> {
         e.preventDefault();
 
@@ -103,18 +105,21 @@ export default class AddReport extends Component {
         reader.readAsDataURL(file)
     };
 
+    // handling Datepicker with start date
     handlerStartDate = (event, date)=> {
         this.setState({
             startDate: date
         });
     };
 
+    // handling Datepicker with end date
     handlerEndDate = (event, date)=> {
         this.setState({
             endDate: date
         });
     };
 
+    // handling AddReport button, save data to the Parse
     handleAddReport = ()=> {
         var _this = this;
         var token = Math.random().toString(36).substr(2);
@@ -128,27 +133,29 @@ export default class AddReport extends Component {
         report.set('campaign', this.state.clickedCampaign.map(function (camp) {
             return {"__type": "Pointer", "className": "Campaign", "objectId": camp}
         }));
-        var name = 'logo.jpg';
-        var parseFile = new Parse.File(name, this.state.file);
+        report.set('token', token);
 
-        console.log('parsefile->', parseFile);
+        var fileName = '____logo.png';
+        var parseFile = new Parse.File(fileName, this.state.file);
 
         parseFile.save().then(function () {
         }, function (error) {
             console.log('the file could not been saved', error);
         });
-
         report.set('logo', parseFile);
-        report.set('token', token);
+
+    // save and send data to Parse
         report.save(null, {
             success: function (report) {
+                // open 'success dialog' if data has send successfully
                 if (report) {
                     _this.setState({
                         sentReport: true
                     });
                 }
                 console.log(report);
-            }
+            },
+
         }, {
             error: function (error) {
                 console.log(error);
@@ -157,13 +164,12 @@ export default class AddReport extends Component {
     };
 
     render() {
-
         var {imagePreviewUrl} = this.state;
 
-        if(imagePreviewUrl) {
+        if (imagePreviewUrl) {
             var imagePreview = <img className="img-preview" src={imagePreviewUrl} alt="text"/>
         }
-        if(this.state.sentReport) {
+        if (this.state.sentReport) {
             var reportConfirm = <ReportConfirm name={this.state.reportName}/>
         }
 
