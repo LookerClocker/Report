@@ -36,7 +36,7 @@ export default class Login extends Component {
                 // pass data to App after reloading page
                 _this.fullFill(items);
             });
-
+            // fetch campaign to pass them to AddReport through Report Component
             this.getCampaign(function (items) {
                 _this.setState({
                     list_of_campaign: items
@@ -67,7 +67,7 @@ export default class Login extends Component {
         });
         return true;
     };
-
+    // get all campaign from parse
     getCampaign = (callback)=> {
         var query = new Parse.Query('Campaign');
         query.limit(10000);
@@ -137,14 +137,21 @@ export default class Login extends Component {
         Parse.User.logIn(this.state.login, this.state.password, {
             success: function () {
                 _this.setState({label: 'logout'});
-                // call this function to display data immediately after login
+                // call this function to display load reports and campaigns immediately after login
                 _this.getReport(function (items) {
                     _this.setState({
                         list_of_reports: items
                     });
-                    // pass data to App
+                    // pass reports to App
                     _this.fullFill(items);
                 });
+                _this.getCampaign(function (items) {
+                    _this.setState({
+                        list_of_campaign: items
+                    });
+                    // pass campaigns to App
+                    _this.fullFilCampaign(items);
+                })
             },
             error: function (user, error) {
                 console.log(user + error);

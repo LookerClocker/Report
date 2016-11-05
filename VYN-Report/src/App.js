@@ -15,7 +15,7 @@ export default class App extends Component {
         super(props);
         this.state = {
             reports: [],
-            campaign:[]
+            campaigns:[]
         }
     };
 
@@ -30,7 +30,7 @@ export default class App extends Component {
 
     // callback function witch fetch Campaign from Login component
     fetchCampaign = (campaign)=> {
-        this.setState({campaign: campaign});
+        this.setState({campaigns: campaign});
     };
 
     render() {
@@ -39,7 +39,7 @@ export default class App extends Component {
                 <AppBar
                     iconElementRight={<Login fetch={this.fetchReport} fetchCampaign={this.fetchCampaign}/>}
                 />
-                <Report report={this.state.reports} campaign={this.state.campaign}/>
+                <Report report={this.state.reports} campaign={this.state.campaigns}/>
             </div>
         );
     }

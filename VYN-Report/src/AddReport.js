@@ -157,8 +157,6 @@ export default class AddReport extends Component {
 
     render() {
 
-        console.log('file', this.state.file);
-
         var {imagePreviewUrl} = this.state;
         var imagePreview = null;
         if (imagePreviewUrl) {
