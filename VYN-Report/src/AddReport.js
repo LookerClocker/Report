@@ -8,16 +8,37 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import DatePicker from 'material-ui/DatePicker';
 import ReportConfirm from './SuccessDialog'
+import DropzoneComponent from 'react-dropzone-component/lib/react-dropzone';
 
 var Parse = require('parse').Parse;
 var parseApplicationId = 'VYN-BO';
 var parseJavaScriptKey = 'js-key';
 var parseMasterKey = 'PZ/Fc_YwK:d5[Szp';
 
+var imageCollection = [];
 var row = [];
+var imagesId = [];
 
 Parse.serverURL = "http://api.valueyournetwork.com/parse";
 Parse.initialize(parseApplicationId, parseJavaScriptKey, parseMasterKey);
+
+// dropzone`s objects
+var componentConfig = {
+        iconFiletypes: ['.jpg', '.png', '.gif'],
+        showFiletypeIcon: true,
+        postUrl: '/uploadHandler'
+    },
+    djsConfig = {
+        addRemoveLinks: true,
+        acceptedFiles: 'image/jpeg,image/png,image/gif,application/pdf,application/txt',
+        autoProcessQueue: false,
+    },
+    myDropzone,
+    eventHandlers = {
+        addedfile: function (file) {
+            imageCollection.push(file);
+        }
+    };
 
 export default class AddReport extends Component {
     constructor(props) {
@@ -35,7 +56,9 @@ export default class AddReport extends Component {
             clickedCampaign: [],
             token: '',
             sentReport: false,
-            fileName: ''
+            fileName: '',
+            collectionImages: [],
+            collectionImagesId: []
         };
     }
 
@@ -53,8 +76,10 @@ export default class AddReport extends Component {
                 return n.parentCamp !== null;
             }).map(function (item) {
                 return item.id;
-            })
-        })
+            }),
+            // full fill array from dropzone
+            collectionImages: imageCollection
+        });
     };
 
     clickBack = ()=> {
@@ -124,8 +149,44 @@ export default class AddReport extends Component {
         var _this = this;
         var token = Math.random().toString(36).substr(2);
 
+        var ScreenshotClass = Parse.Object.extend('Screenshots');
         var ReportClass = Parse.Object.extend('Report');
         var report = new ReportClass();
+
+        // adding multiply images into Screenshots Class on Parse
+        var imageName = '____image.png';
+
+        for (var i = 0; i < this.state.collectionImages.length; i++) {
+
+            var screenshot = new ScreenshotClass();
+            var parseImage = new Parse.File(imageName, this.state.collectionImages[i]);
+
+            parseImage.save().then(function () {
+            }, function (error) {
+                console.log('the file could not been saved', error);
+            });
+
+            screenshot.set('image', parseImage);
+            screenshot.save(null, {
+                success: function (screenshot) {
+                    imagesId.push(screenshot.id);
+                    _this.setState({
+                        collectionImagesId: imagesId
+                    });
+                    report.set('screenshots', _this.state.collectionImagesId.map(function (image) {
+                        return {"__type": "Pointer", "className": "Screenshots", "objectId": image}
+
+                    }));
+                },
+
+            }, {
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        // Adding data into Report Class
 
         report.set('name', this.state.reportName);
         report.set('startDate', this.state.startDate);
@@ -144,7 +205,7 @@ export default class AddReport extends Component {
         });
         report.set('logo', parseFile);
 
-    // save and send data to Parse
+        // save and send data to Parse
         report.save(null, {
             success: function (report) {
                 // open 'success dialog' if data has send successfully
@@ -153,7 +214,7 @@ export default class AddReport extends Component {
                         sentReport: true
                     });
                 }
-                console.log(report);
+                console.log('REPORT HAS SENT->', report);
             },
 
         }, {
@@ -161,9 +222,21 @@ export default class AddReport extends Component {
                 console.log(error);
             }
         });
+
+    };
+
+    initCallback = (dropzone)=> {
+        myDropzone = dropzone;
+    };
+
+    removeFile = ()=> {
+        if (myDropzone) {
+            myDropzone.removeFile();
+        }
     };
 
     render() {
+
         var {imagePreviewUrl} = this.state;
 
         if (imagePreviewUrl) {
@@ -216,9 +289,14 @@ export default class AddReport extends Component {
                                onChange={this.handleImageChange}/>
                         {imagePreview}
                     </div>
+                    <hr/>
                 </div>
                 <div className="row">
-                    <hr/>
+                    <DropzoneComponent config={componentConfig}
+                                       djsConfig={djsConfig}
+                                       eventHandlers={eventHandlers}/>
+                </div>
+                <div className="row">
                     <div className="col-md-3">
                         <button
                             className="btn btn-primary"

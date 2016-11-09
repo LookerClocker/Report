@@ -51,7 +51,8 @@ export default class Report extends Component {
             sortColumn: null,
             sortDirection: null,
             showComponent: false,
-            campaigns: []
+            campaigns: [],
+            showViewReport: false
         };
     }
 
@@ -109,14 +110,15 @@ export default class Report extends Component {
     };
 
     render() {
-
         var grid, addReportButt, AddReportComp = '';
 
         // even if user exist but report are empty show AddReport button
         if (Parse.User.current()) {
-            addReportButt = <button className="btn btn-primary add-report" onClick={this.handleAddReport}> Add new Report </button>;
+            addReportButt =
+                <button className="btn btn-primary add-report" onClick={this.handleAddReport}> Add new Report </button>;
             // add report view
-            AddReportComp = <AddReport campReports={this.state.reports} handleBack={this.backButton} campainsList={this.state.campaigns}/>;
+            AddReportComp = <AddReport campReports={this.state.reports} handleBack={this.backButton}
+                                       campainsList={this.state.campaigns}/>;
         }
 
         if (this.state.reports.length) {

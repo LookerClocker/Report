@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-
 import AppBar from 'material-ui/AppBar';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/react-dropzone-component/styles/filepicker.css'
+import '../node_modules/dropzone/dist/min/dropzone.min.css'
 import './App.css'
 
 import Login from './Login';
